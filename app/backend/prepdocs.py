@@ -191,6 +191,7 @@ def setup_file_processors(
         ".heic": FileProcessor(doc_int_parser, sentence_text_splitter),
         ".md": FileProcessor(TextParser(), sentence_text_splitter),
         ".txt": FileProcessor(TextParser(), sentence_text_splitter),
+        ".csv": FileProcessor(TextParser(), sentence_text_splitter)
     }
 
 

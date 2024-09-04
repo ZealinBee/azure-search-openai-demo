@@ -1,3 +1,6 @@
+data/CSV_FilesOf_Finlex-main
+data/pdf test
+
 # Azure az webapp deployment details
 .azure
 *_env

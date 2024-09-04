@@ -1,0 +1,205 @@
+{
+    "university": {
+      "name": "Tech Valley University",
+      "departments": [
+        {
+          "name": "Computer Science",
+          "courses": [
+            {
+              "course_id": "CS101",
+              "course_name": "Introduction to Computer Science",
+              "description": "An introductory course on the basics of computer science.",
+              "credits": 3,
+              "instructor": {
+                "instructor_id": "I001",
+                "name": "Dr. Alice Johnson",
+                "email": "alice.johnson@techvalley.edu",
+                "office_hours": "Mon, Wed 2:00 PM - 4:00 PM"
+              },
+              "schedule": {
+                "days": ["Monday", "Wednesday"],
+                "time": "10:00 AM - 11:30 AM",
+                "location": "Building A, Room 101"
+              },
+              "students": [
+                {
+                  "student_id": "S001",
+                  "name": "John Doe",
+                  "email": "john.doe@student.techvalley.edu",
+                  "grades": {
+                    "assignments": [
+                      {"assignment_name": "Assignment 1", "grade": 85},
+                      {"assignment_name": "Assignment 2", "grade": 90}
+                    ],
+                    "midterm_exam": 88,
+                    "final_exam": 92,
+                    "final_grade": "A"
+                  }
+                },
+                {
+                  "student_id": "S002",
+                  "name": "Jane Smith",
+                  "email": "jane.smith@student.techvalley.edu",
+                  "grades": {
+                    "assignments": [
+                      {"assignment_name": "Assignment 1", "grade": 78},
+                      {"assignment_name": "Assignment 2", "grade": 82}
+                    ],
+                    "midterm_exam": 80,
+                    "final_exam": 85,
+                    "final_grade": "B+"
+                  }
+                }
+              ]
+            },
+            {
+              "course_id": "CS201",
+              "course_name": "Data Structures",
+              "description": "A course on the fundamental data structures in computer science.",
+              "credits": 4,
+              "instructor": {
+                "instructor_id": "I002",
+                "name": "Dr. Bob Lee",
+                "email": "bob.lee@techvalley.edu",
+                "office_hours": "Tue, Thu 10:00 AM - 12:00 PM"
+              },
+              "schedule": {
+                "days": ["Tuesday", "Thursday"],
+                "time": "1:00 PM - 2:30 PM",
+                "location": "Building B, Room 202"
+              },
+              "students": [
+                {
+                  "student_id": "S001",
+                  "name": "John Doe",
+                  "email": "john.doe@student.techvalley.edu",
+                  "grades": {
+                    "assignments": [
+                      {"assignment_name": "Assignment 1", "grade": 90},
+                      {"assignment_name": "Assignment 2", "grade": 85}
+                    ],
+                    "midterm_exam": 87,
+                    "final_exam": 89,
+                    "final_grade": "A-"
+                  }
+                },
+                {
+                  "student_id": "S003",
+                  "name": "Emily White",
+                  "email": "emily.white@student.techvalley.edu",
+                  "grades": {
+                    "assignments": [
+                      {"assignment_name": "Assignment 1", "grade": 92},
+                      {"assignment_name": "Assignment 2", "grade": 88}
+                    ],
+                    "midterm_exam": 91,
+                    "final_exam": 90,
+                    "final_grade": "A"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Mathematics",
+          "courses": [
+            {
+              "course_id": "MATH101",
+              "course_name": "Calculus I",
+              "description": "An introductory course on differential and integral calculus.",
+              "credits": 4,
+              "instructor": {
+                "instructor_id": "I003",
+                "name": "Dr. Carol Davis",
+                "email": "carol.davis@techvalley.edu",
+                "office_hours": "Mon, Wed 11:00 AM - 1:00 PM"
+              },
+              "schedule": {
+                "days": ["Monday", "Wednesday", "Friday"],
+                "time": "9:00 AM - 10:00 AM",
+                "location": "Building C, Room 303"
+              },
+              "students": [
+                {
+                  "student_id": "S002",
+                  "name": "Jane Smith",
+                  "email": "jane.smith@student.techvalley.edu",
+                  "grades": {
+                    "assignments": [
+                      {"assignment_name": "Assignment 1", "grade": 88},
+                      {"assignment_name": "Assignment 2", "grade": 91}
+                    ],
+                    "midterm_exam": 84,
+                    "final_exam": 90,
+                    "final_grade": "A-"
+                  }
+                },
+                {
+                  "student_id": "S004",
+                  "name": "Michael Brown",
+                  "email": "michael.brown@student.techvalley.edu",
+                  "grades": {
+                    "assignments": [
+                      {"assignment_name": "Assignment 1", "grade": 80},
+                      {"assignment_name": "Assignment 2", "grade": 85}
+                    ],
+                    "midterm_exam": 82,
+                    "final_exam": 87,
+                    "final_grade": "B+"
+                  }
+                }
+              ]
+            },
+            {
+              "course_id": "MATH201",
+              "course_name": "Linear Algebra",
+              "description": "A course on the theory and applications of linear algebra.",
+              "credits": 3,
+              "instructor": {
+                "instructor_id": "I004",
+                "name": "Dr. David Harris",
+                "email": "david.harris@techvalley.edu",
+                "office_hours": "Tue, Thu 1:00 PM - 3:00 PM"
+              },
+              "schedule": {
+                "days": ["Tuesday", "Thursday"],
+                "time": "10:00 AM - 11:30 AM",
+                "location": "Building D, Room 404"
+              },
+              "students": [
+                {
+                  "student_id": "S003",
+                  "name": "Emily White",
+                  "email": "emily.white@student.techvalley.edu",
+                  "grades": {
+                    "assignments": [
+                      {"assignment_name": "Assignment 1", "grade": 93},
+                      {"assignment_name": "Assignment 2", "grade": 89}
+                    ],
+                    "midterm_exam": 85,
+                    "final_exam": 92,
+                    "final_grade": "A"
+                  }
+                },
+                {
+                  "student_id": "S004",
+                  "name": "Michael Brown",
+                  "email": "michael.brown@student.techvalley.edu",
+                  "grades": {
+                    "assignments": [
+                      {"assignment_name": "Assignment 1", "grade": 78},
+                      {"assignment_name": "Assignment 2", "grade": 82}
+                    ],
+                    "midterm_exam": 80,
+                    "final_exam": 86,
+                    "final_grade": "B"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
