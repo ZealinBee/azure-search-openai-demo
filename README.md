@@ -1,3 +1,5 @@
+Modified by: Zhiyuan Liu
+
 # ChatGPT-like app with your data using Azure OpenAI and Azure AI Search (Python)
 
 This solution's backend is written in Python. There are also [**JavaScript**](https://aka.ms/azai/js/code), [**.NET**](https://aka.ms/azai/net/code), and [**Java**](https://aka.ms/azai/java/code) samples based on this one. Learn more about [developing AI apps using Azure AI Services](https://aka.ms/azai).
@@ -98,7 +100,7 @@ A related option is VS Code Dev Containers, which will open the project in your 
 
 1. Start Docker Desktop (install it if not already installed)
 2. Open the project:
-    [![Open in Dev Containers](https://img.shields.io/static/v1?style=for-the-badge&label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/azure-samples/azure-search-openai-demo)
+   [![Open in Dev Containers](https://img.shields.io/static/v1?style=for-the-badge&label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/azure-samples/azure-search-openai-demo)
 
 3. In the VS Code window that opens, once the project files show up (this may take several minutes), open a terminal window.
 
@@ -106,23 +108,23 @@ A related option is VS Code Dev Containers, which will open the project in your 
 
 1. Install the required tools:
 
-    - [Azure Developer CLI](https://aka.ms/azure-dev/install)
-    - [Python 3.9, 3.10, or 3.11](https://www.python.org/downloads/)
-      - **Important**: Python and the pip package manager must be in the path in Windows for the setup scripts to work.
-      - **Important**: Ensure you can run `python --version` from console. On Ubuntu, you might need to run `sudo apt install python-is-python3` to link `python` to `python3`.
-    - [Node.js 18+](https://nodejs.org/download/)
-    - [Git](https://git-scm.com/downloads)
-    - [Powershell 7+ (pwsh)](https://github.com/powershell/powershell) - For Windows users only.
-      - **Important**: Ensure you can run `pwsh.exe` from a PowerShell terminal. If this fails, you likely need to upgrade PowerShell.
+   - [Azure Developer CLI](https://aka.ms/azure-dev/install)
+   - [Python 3.9, 3.10, or 3.11](https://www.python.org/downloads/)
+     - **Important**: Python and the pip package manager must be in the path in Windows for the setup scripts to work.
+     - **Important**: Ensure you can run `python --version` from console. On Ubuntu, you might need to run `sudo apt install python-is-python3` to link `python` to `python3`.
+   - [Node.js 18+](https://nodejs.org/download/)
+   - [Git](https://git-scm.com/downloads)
+   - [Powershell 7+ (pwsh)](https://github.com/powershell/powershell) - For Windows users only.
+     - **Important**: Ensure you can run `pwsh.exe` from a PowerShell terminal. If this fails, you likely need to upgrade PowerShell.
 
 2. Create a new folder and switch to it in the terminal.
 3. Run this command to download the project code:
 
-    ```shell
-    azd init -t azure-search-openai-demo
-    ```
+   ```shell
+   azd init -t azure-search-openai-demo
+   ```
 
-    Note that this command will initialize a git repository, so you do not need to clone this repository.
+   Note that this command will initialize a git repository, so you do not need to clone this repository.
 
 ## Deploying
 
@@ -130,9 +132,9 @@ Follow these steps to provision Azure resources and deploy the application code:
 
 1. Login to your Azure account:
 
-    ```shell
-    azd auth login
-    ```
+   ```shell
+   azd auth login
+   ```
 
     For GitHub Codespaces users, if the previous command fails, try: 
    ```shell
@@ -141,18 +143,19 @@ Follow these steps to provision Azure resources and deploy the application code:
 
 1. Create a new azd environment:
 
-    ```shell
-    azd env new
-    ```
+   ```shell
+   azd env new
+   ```
 
-    Enter a name that will be used for the resource group.
-    This will create a new folder in the `.azure` folder, and set it as the active environment for any calls to `azd` going forward.
+   Enter a name that will be used for the resource group.
+   This will create a new folder in the `.azure` folder, and set it as the active environment for any calls to `azd` going forward.
+
 1. (Optional) This is the point where you can customize the deployment by setting environment variables, in order to [use existing resources](docs/deploy_existing.md), [enable optional features (such as auth or vision)](docs/deploy_features.md), or [deploy to free tiers](docs/deploy_lowcost.md).
 1. Run `azd up` - This will provision Azure resources and deploy this sample to those resources, including building the search index based on the files found in the `./data` folder.
-    - **Important**: Beware that the resources created by this command will incur immediate costs, primarily from the AI Search resource. These resources may accrue costs even if you interrupt the command before it is fully executed. You can run `azd down` or delete the resources manually to avoid unnecessary spending.
-    - You will be prompted to select two locations, one for the majority of resources and one for the OpenAI resource, which is currently a short list. That location list is based on the [OpenAI model availability table](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models#model-summary-table-and-region-availability) and may become outdated as availability changes.
-1. After the application has been successfully deployed you will see a URL printed to the console.  Click that URL to interact with the application in your browser.
-It will look like the following:
+   - **Important**: Beware that the resources created by this command will incur immediate costs, primarily from the AI Search resource. These resources may accrue costs even if you interrupt the command before it is fully executed. You can run `azd down` or delete the resources manually to avoid unnecessary spending.
+   - You will be prompted to select two locations, one for the majority of resources and one for the OpenAI resource, which is currently a short list. That location list is based on the [OpenAI model availability table](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models#model-summary-table-and-region-availability) and may become outdated as availability changes.
+1. After the application has been successfully deployed you will see a URL printed to the console. Click that URL to interact with the application in your browser.
+   It will look like the following:
 
 !['Output from running azd up'](docs/images/endpoint.png)
 
@@ -180,9 +183,9 @@ either you or they can follow these steps:
 1. Install the [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli)
 1. Run `azd init -t azure-search-openai-demo` or clone this repository.
 1. Run `azd env refresh -e {environment name}`
-   They will need the azd environment name, subscription ID, and location to run this command. You can find those values in your `.azure/{env name}/.env` file.  This will populate their azd environment's `.env` file with all the settings needed to run the app locally.
+   They will need the azd environment name, subscription ID, and location to run this command. You can find those values in your `.azure/{env name}/.env` file. This will populate their azd environment's `.env` file with all the settings needed to run the app locally.
 1. Set the environment variable `AZURE_PRINCIPAL_ID` either in that `.env` file or in the active shell to their Azure ID, which they can get with `az ad signed-in-user show`.
-1. Run `./scripts/roles.ps1` or `.scripts/roles.sh` to assign all of the necessary roles to the user.  If they do not have the necessary permission to create roles in the subscription, then you may need to run this script for them. Once the script runs, they should be able to run the app locally.
+1. Run `./scripts/roles.ps1` or `.scripts/roles.sh` to assign all of the necessary roles to the user. If they do not have the necessary permission to create roles in the subscription, then you may need to run this script for them. Once the script runs, they should be able to run the app locally.
 
 ## Running locally
 
@@ -283,4 +286,4 @@ so please use the support mechanisms described above, and we will do our best to
 
 ### Note
 
->Note: The PDF documents used in this demo contain information generated using a language model (Azure OpenAI Service). The information contained in these documents is only for demonstration purposes and does not reflect the opinions or beliefs of Microsoft. Microsoft makes no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability or availability with respect to the information contained in this document. All rights reserved to Microsoft.
+> Note: The PDF documents used in this demo contain information generated using a language model (Azure OpenAI Service). The information contained in these documents is only for demonstration purposes and does not reflect the opinions or beliefs of Microsoft. Microsoft makes no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability or availability with respect to the information contained in this document. All rights reserved to Microsoft.
